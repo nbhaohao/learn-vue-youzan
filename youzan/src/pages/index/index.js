@@ -2,15 +2,17 @@ import "css/common.css";
 import "./index.css";
 
 import Vue from "vue";
-import axsios from "axios";
-import url from "js/api.js";
+import leanCloudTool from "js/api.js";
 import { Toast } from 'mint-ui';
 import { InfiniteScroll } from 'mint-ui';
 
 Vue.use(InfiniteScroll);
 
+
+
 import footNav from "components/FootNav.vue"
 import topBanner from "components/Swiper.vue"
+
 
 new Vue({
     el: "#app",
@@ -49,13 +51,10 @@ new Vue({
             }, 200);
         },
         getNewData(type) {
-            axsios.post(url.hotLists, {
-                pageNum: this.hotList.pageNum,
-                pageSize: 6,
-            }).then(res => {
+            leanCloudTool("HotList").then(res => {
                 let i = 0
                 let eventId = setInterval(() => {
-                    if (!res.data.lists[i]) {
+                    if (!res[i]) {
                         this.hotList.loading = false
                         if (type === "first") {
                             this.hotList.isInitSuccess = true
@@ -67,7 +66,7 @@ new Vue({
                         clearInterval(eventId)
                         return
                     } else {
-                        this.hotList.lists.push(res.data.lists[i])
+                        this.hotList.lists.push(res[i])
                         i++
                     }
                 }, 200)
@@ -87,8 +86,8 @@ new Vue({
 
         },
         getBannerImg() {
-            axsios.post(url.indexBanner, {}).then(res => {
-                this.bannerList = res.data.lists
+            leanCloudTool("Banner").then(res => {
+                this.bannerList = res
             }, () => {
                 Toast({
                     message: '网络异常',

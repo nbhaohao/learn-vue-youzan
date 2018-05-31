@@ -2,8 +2,7 @@ import "css/common.css"
 import "./category.css"
 
 import Vue from "vue";
-import axsios from "axios";
-import url from "js/api.js";
+import leanCloudTool from "js/api.js";
 
 import footNav from "components/FootNav.vue"
 import { Loadmore } from 'mint-ui';
@@ -34,8 +33,8 @@ new Vue({
 
         },
         getAsideTitleList() {
-            axsios.post(url.asideTitleList, {}).then(res => {
-                this.asideList = res.data.list
+            leanCloudTool("AsideTitles").then(res => {
+                this.asideList = res
             }, () => {
                 Toast({
                     message: '网络异常',
@@ -51,5 +50,17 @@ new Vue({
     },
     created() {
         this.getAsideTitleList()
+        // leanCloudTool("subTitles").then(res => {
+        //     let data = res[0]
+        //     console.log("brand", JSON.parse(data.brandList))
+        //     console.log("categoryList", JSON.parse(data.categoryList))
+        //
+        // }, () => {
+        //     Toast({
+        //         message: '网络异常',
+        //         position: 'bottom',
+        //         duration: 2500
+        //     })
+        // })
     }
 })

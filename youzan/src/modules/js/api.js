@@ -1,13 +1,17 @@
-let url = {
-    hotLists: "/index/hotLists",
-    indexBanner: "/index/banner",
-    asideTitleList: "/category/topList",
+import AV from "leancloud-storage"
+import "js/avInit.js"
+
+import { Toast } from 'mint-ui';
+
+export default function(objName){
+    var query = new AV.Query(objName)
+    return query.find().then(data => {
+        return data.map(item => {return {...item.attributes}})
+    },() => {
+        Toast({
+            message: '网络异常',
+            position: 'bottom',
+            duration: 2500
+        })
+    })
 }
-
-let host = "http://rap2api.taobao.org/app/mock/14835/"
-
-for (let key in url) {
-  url[key] = host + url[key]
-}
-
-export default url

@@ -12,7 +12,10 @@
   "dependencies": {
     "animate.css": "^3.6.1",
     "axios": "^0.18.0",
+    "install": "^0.11.0",
+    "leancloud-storage": "^3.7.0",
     "mint-ui": "^2.2.13",
+    "npm": "^6.1.0",
     "swiper": "^4.3.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
