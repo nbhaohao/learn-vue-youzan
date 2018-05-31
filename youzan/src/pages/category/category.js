@@ -10,6 +10,16 @@ import { Toast } from 'mint-ui';
 
 Vue.component(Loadmore.name, Loadmore);
 
+Vue.filter('floatnum', function (value) {
+    let strValue = String(value)
+    if (strValue.indexOf(".") === -1) {
+        return strValue + ".00"
+    }
+    else if (strValue.split(".")[1].length === 1) {
+        return strValue + "0"
+    }
+})
+
 new Vue({
     el: "#app",
     data: {
@@ -57,7 +67,6 @@ new Vue({
                     let data = res[0]
                     this.brandList = JSON.parse(data.brandList)
                     this.categoryList = JSON.parse(data.categoryList)
-
                 })
             }
         }
