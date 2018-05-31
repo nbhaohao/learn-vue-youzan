@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f4ec5c1-9c1f-44a8-b959-ce0e1782515e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/youzan/.gitignore" afterPath="$PROJECT_DIR$/youzan/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/youzan/config/index.js" afterPath="$PROJECT_DIR$/youzan/config/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,11 +45,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/youzan/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="38">
               <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/youzan/config/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="45" column="6" lean-forward="false" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -137,7 +147,6 @@
     <findStrings>
       <find>module</find>
       <find>__dirname</find>
-      <find>assetsPublicPath</find>
       <find>utils</find>
       <find>exports</find>
       <find>fadeIn</find>
@@ -163,6 +172,7 @@
       <find>list</find>
       <find>show</find>
       <find>v-show</find>
+      <find>assetsPublicPath</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -194,6 +204,7 @@
         <option value="$PROJECT_DIR$/youzan/src/pages/category/category.js" />
         <option value="$PROJECT_DIR$/youzan/src/pages/category/category.html" />
         <option value="$PROJECT_DIR$/youzan/.gitignore" />
+        <option value="$PROJECT_DIR$/youzan/config/index.js" />
       </list>
     </option>
   </component>
@@ -247,6 +258,12 @@
               <item name="learn-vue-youzan" type="b2602c69:ProjectViewProjectNode" />
               <item name="learn-vue-youzan" type="462c0819:PsiDirectoryNode" />
               <item name="youzan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learn-vue-youzan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learn-vue-youzan" type="462c0819:PsiDirectoryNode" />
+              <item name="youzan" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="learn-vue-youzan" type="b2602c69:ProjectViewProjectNode" />
@@ -375,12 +392,12 @@
       <workItem from="1527681001051" duration="11000" />
       <workItem from="1527682887905" duration="67000" />
       <workItem from="1527692290911" duration="891000" />
-      <workItem from="1527725571179" duration="27986000" />
+      <workItem from="1527725571179" duration="28310000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43294000" />
+    <option name="totallyTimeSpent" value="43618000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1600" height="900" extended-state="6" />
@@ -774,6 +791,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/youzan/config/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="45" column="6" lean-forward="false" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
           <folding />
         </state>
       </provider>
