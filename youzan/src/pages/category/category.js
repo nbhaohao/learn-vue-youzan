@@ -15,8 +15,13 @@ new Vue({
     data: {
         allLoaded: false,
         asideList: null,
-        topId: "-1",
+        topId: "",
         activeIndex: 0,
+        brandList: [],
+        categoryList: [],
+        hotGoods: [],
+        hotKeywords: [],
+        hotShop: [],
     },
     components: {
         "foot-nav": footNav,
@@ -35,32 +40,30 @@ new Vue({
         getAsideTitleList() {
             leanCloudTool("AsideTitles").then(res => {
                 this.asideList = res
-            }, () => {
-                Toast({
-                    message: '网络异常',
-                    position: 'bottom',
-                    duration: 2500
-                })
             })
         },
         getSubList(id, index) {
             this.topId = id
             this.activeIndex = index
+            if (id === "-1") {
+                leanCloudTool("RankList").then(res => {
+                    let data = res[0]
+                    this.hotGoods = JSON.parse(data.hotGoods)
+                    this.hotKeywords = JSON.parse(data.hotKeyWords)
+                    this.hotShop = JSON.parse(data.hotShop)
+                })
+            } else {
+                leanCloudTool("subTitles").then(res => {
+                    let data = res[0]
+                    this.brandList = JSON.parse(data.brandList)
+                    this.categoryList = JSON.parse(data.categoryList)
+
+                })
+            }
         }
     },
     created() {
         this.getAsideTitleList()
-        // leanCloudTool("subTitles").then(res => {
-        //     let data = res[0]
-        //     console.log("brand", JSON.parse(data.brandList))
-        //     console.log("categoryList", JSON.parse(data.categoryList))
-        //
-        // }, () => {
-        //     Toast({
-        //         message: '网络异常',
-        //         position: 'bottom',
-        //         duration: 2500
-        //     })
-        // })
+        this.getSubList("-1",0)
     }
 })
