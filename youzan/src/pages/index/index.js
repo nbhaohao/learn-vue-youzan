@@ -1,6 +1,5 @@
 import "css/common.css";
 import "./index.css";
-import "animate.css";
 
 import Vue from "vue";
 import axsios from "axios";
@@ -11,6 +10,7 @@ import { InfiniteScroll } from 'mint-ui';
 Vue.use(InfiniteScroll);
 
 import footNav from "components/FootNav.vue"
+import topBanner from "components/Swiper.vue"
 
 new Vue({
     el: "#app",
@@ -23,9 +23,22 @@ new Vue({
             isListDone: false,
             pageNum: 0,
         },
+        bannerList: null,
+        bannerSwiper: {
+            options: {
+                direction: 'horizontal',
+                loop: true,
+                pagination: {
+                    el: '.index-swiper .swiper-pagination',
+                },
+                autoplay: true,
+            },
+            domSelector: ".js-image-swiper .index-swiper",
+        },
     },
     components: {
         "foot-nav": footNav,
+        "top-banner": topBanner,
     },
     methods: {
         loadMore() {
@@ -72,10 +85,22 @@ new Vue({
                 window.ontouchmove = null
             }
 
-        }
+        },
+        getBannerImg() {
+            axsios.post(url.indexBanner, {}).then(res => {
+                this.bannerList = res.data.lists
+            }, () => {
+                Toast({
+                    message: '网络异常',
+                    position: 'bottom',
+                    duration: 2500
+                })
+            })
+        },
     },
     created() {
         this.getNewData("first")
+        this.getBannerImg()
         this.listenToWindowScroll()
     }
 })

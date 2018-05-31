@@ -429,9 +429,9 @@ only screen and (min-device-pixel-ratio:1.5) {
   margin: 0 auto
 }
 
-.container .content {
-  zoom: 1
-}
+/*.container .content {*/
+  /*zoom: 1*/
+/*}*/
 
 .container .content:after {
   content: "";

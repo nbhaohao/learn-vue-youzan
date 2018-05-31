@@ -20,7 +20,7 @@
   <!-- 针对LCD液晶显示器设计，可提高文字的清晰度 -->
   <meta http-equiv="cleartype" content="on">
   <link rel="shortcut icon" href="https://b.yzcdn.cn/v2/image/yz_fc.ico">
-  <title>发现朋友圈的推荐</title>
+  <title>仿有赞商城</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <!--<link rel="stylesheet" href="./css/common.css">-->
   <!--<link rel="stylesheet" href="./css/index.css">-->
@@ -32,17 +32,8 @@
       <div class="content">
         <div class="js-image-swiper
    custom-image-swiper  custom-image-swiper-single" data-images="1">
-          <!--<div class="swiper-container">-->
-            <!--<div class="swiper-wrapper">-->
-              <!--<div class="swp-page">-->
-                <!--<a class="js-no-follow" href="https://h5.koudaitong.com/v2/index/rukou">-->
-                  <!--<img class="goods-main-photo fadeIn" src="https://img.yzcdn.cn/upload_files/2016/07/29/Fl3T06Mu7TpIhR4L1s2tzm8cZrgt.jpg">-->
-                <!--</a>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
+            <top-banner :swiper-options="bannerSwiper.options" :dom-selector="bannerSwiper.domSelector"  :slide-list="bannerList"></top-banner>
         </div>
-        <a href="https://maijia.youzan.com/mars/notice/detail?id=" class="notice"></a>
         <div class="section-title">优店推荐</div>
         <div class="section-content shops">
           <div class="shop-wrap">
@@ -73,19 +64,6 @@
           </div>
         </div>
         <div class="hot-goods js-waterfull-wrap" data-src="">
-          <!--<li>-->
-              <!--<div class="goods-item">-->
-                  <!--<a href="https://h5.youzan.com/v2/showcase/goods?alias=365dgchyzdtxe&amp;source=yzapp&amp;f_platform=yzapp">-->
-                      <!--<div class="thumb img-box">-->
-                          <!--<img class="fadeIn" src="https://img.yzcdn.cn/upload_files/2017/07/10/FqQYAfXfNGyg_AaV-fJVCaOg4j4l.jpg?imageView2/2/w/320/h/0/q/75/format/jpg">-->
-                      <!--</div>-->
-                      <!--<div class="detail">-->
-                          <!--<div class="title">【现挖48小时内发货】假一罚十 ！正宗天目山小香薯，不让朴实薯农血本无归！</div>-->
-                          <!--<div class="price">￥49.00</div>-->
-                      <!--</div>-->
-                  <!--</a>-->
-              <!--</div>-->
-          <!--</li>-->
             <ul class="js-list js-lazy" data-src="" v-infinite-scroll="loadMore" infinite-scroll-disabled="hotList.loading" infinite-scroll-distance="10">
                 <li v-for="(item,index) in hotList.lists" :key="index" :data-id="item.id">
                   <div class="goods-item">
@@ -107,15 +85,7 @@
         <div class="js-show-find category-guid" style="display: none;"></div>
       </div>
     </div>
-      <foot-nav></foot-nav>
-    <!--<div class="bottom-nav">-->
-        <!--<ul>-->
-          <!--<li class="active"><a href="https://maijia.youzan.com/mars/homepage"><i class="icon-home"></i><div>有赞</div></a></li>-->
-          <!--<li><a href="https://maijia.youzan.com/mars/category"><i class="icon-category"></i><div>分类</div></a></li>-->
-          <!--<li><a href="https://h5.youzan.com/v2/trade/cart?f_platform=yzapp&amp;source=yzapp"><i class="icon-cart"></i><div>购物车</div></a></li>-->
-          <!--<li><a href="https://h5.youzan.com/v2/buyer/member"><i class="icon-user"></i><div>我</div></a></li>-->
-        <!--</ul>-->
-    <!--</div>-->
+      <foot-nav :active-class="'index'"></foot-nav>
   </div>
 </body>
 
