@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f4ec5c1-9c1f-44a8-b959-ce0e1782515e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/youzan/dist/static/css/category.45a1a3b57cb5077e63ed24f806673771.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/youzan/dist/static/css/category.45a1a3b57cb5077e63ed24f806673771.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/youzan/dist/static/css/index.e16bdc0e6d99d10ee924bb11a6aa4257.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/youzan/dist/static/css/index.e16bdc0e6d99d10ee924bb11a6aa4257.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/youzan/dist/static/js/category.a6247cb1a7666c69fa6f.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/youzan/dist/static/js/category.a6247cb1a7666c69fa6f.js.map" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/youzan/dist/category.html" afterPath="$PROJECT_DIR$/youzan/dist/category.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/youzan/dist/index.html" afterPath="$PROJECT_DIR$/youzan/dist/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/youzan/dist/static/js/manifest.7a5344cf3bf0f6661054.js.map" afterPath="$PROJECT_DIR$/youzan/dist/static/js/manifest.7a5344cf3bf0f6661054.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/youzan/src/pages/category/category.css" afterPath="$PROJECT_DIR$/youzan/src/pages/category/category.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/youzan/src/pages/category/category.html" afterPath="$PROJECT_DIR$/youzan/src/pages/category/category.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/youzan/src/pages/category/category.js" afterPath="$PROJECT_DIR$/youzan/src/pages/category/category.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/youzan/src/pages/index/index.html" afterPath="$PROJECT_DIR$/youzan/src/pages/index/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/youzan/src/pages/index/index.js" afterPath="$PROJECT_DIR$/youzan/src/pages/index/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,8 +22,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/youzan/src/pages/index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="69" lean-forward="false" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+            <state relative-caret-position="319">
+              <caret line="75" column="58" lean-forward="false" selection-start-line="75" selection-start-column="58" selection-end-line="75" selection-end-column="58" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -43,26 +34,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="category.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="category.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/youzan/src/pages/category/category.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="72" column="45" lean-forward="false" selection-start-line="72" selection-start-column="45" selection-end-line="72" selection-end-column="45" />
+            <state relative-caret-position="267">
+              <caret line="76" column="63" lean-forward="false" selection-start-line="76" selection-start-column="63" selection-end-line="76" selection-end-column="63" />
               <folding>
                 <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#mt-loadmore#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#mt-loadmore#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#mt-loadmore#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="category.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="category.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/youzan/src/pages/category/category.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="51" column="67" lean-forward="false" selection-start-line="51" selection-start-column="67" selection-end-line="51" selection-end-column="67" />
+            <state relative-caret-position="342">
+              <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -83,9 +74,10 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/youzan/src/pages/index/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="38" />
+            <state relative-caret-position="285">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="23" selection-end-column="2" />
               <folding>
+                <element signature="e#0#24#0" expanded="true" />
                 <element signature="e#214#258#0" expanded="true" />
               </folding>
             </state>
@@ -116,7 +108,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>exports</find>
       <find>fadeIn</find>
       <find>loadMore</find>
       <find>bottom-nav</find>
@@ -139,13 +130,14 @@
       <find>border</find>
       <find>list</find>
       <find>show</find>
-      <find>v-show</find>
       <find>assetsPublicPath</find>
       <find>url</find>
       <find>getSubList</find>
       <find>.hot-goods .goods-item .title</find>
       <find>-webkit-box-orient: vertical</find>
       <find>goods-item</find>
+      <find>v-show</find>
+      <find>price</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -172,13 +164,13 @@
         <option value="$PROJECT_DIR$/youzan/src/modules/css/common.css" />
         <option value="$PROJECT_DIR$/youzan/.gitignore" />
         <option value="$PROJECT_DIR$/youzan/config/index.js" />
-        <option value="$PROJECT_DIR$/youzan/src/pages/index/index.html" />
         <option value="$PROJECT_DIR$/youzan/src/modules/js/avInit.js" />
         <option value="$PROJECT_DIR$/youzan/src/modules/js/api.js" />
-        <option value="$PROJECT_DIR$/youzan/src/pages/index/index.js" />
         <option value="$PROJECT_DIR$/youzan/src/pages/category/category.css" />
-        <option value="$PROJECT_DIR$/youzan/src/pages/category/category.js" />
         <option value="$PROJECT_DIR$/youzan/src/pages/category/category.html" />
+        <option value="$PROJECT_DIR$/youzan/src/pages/index/index.html" />
+        <option value="$PROJECT_DIR$/youzan/src/pages/index/index.js" />
+        <option value="$PROJECT_DIR$/youzan/src/pages/category/category.js" />
       </list>
     </option>
   </component>
@@ -198,7 +190,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/youzan/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="width" value="1391" />
     <option name="height" value="800" />
   </component>
@@ -364,15 +356,15 @@
       <workItem from="1527681001051" duration="11000" />
       <workItem from="1527682887905" duration="67000" />
       <workItem from="1527692290911" duration="891000" />
-      <workItem from="1527725571179" duration="35974000" />
+      <workItem from="1527725571179" duration="38179000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51282000" />
+    <option name="totallyTimeSpent" value="53487000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1600" height="900" extended-state="6" />
+    <frame x="0" y="0" width="1600" height="900" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.169375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -424,7 +416,7 @@
         <state relative-caret-position="19">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <element signature="e#0#24#0" expanded="false" />
+            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -718,20 +710,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/youzan/src/pages/index/index.js">
+    <entry file="file://$PROJECT_DIR$/youzan/src/modules/js/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="38" />
+        <state relative-caret-position="114">
+          <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
           <folding>
-            <element signature="e#214#258#0" expanded="true" />
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/youzan/src/pages/index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="69" lean-forward="false" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+        <state relative-caret-position="319">
+          <caret line="75" column="58" lean-forward="false" selection-start-line="75" selection-start-column="58" selection-end-line="75" selection-end-column="58" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -741,12 +733,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/youzan/src/modules/js/api.js">
+    <entry file="file://$PROJECT_DIR$/youzan/src/pages/category/category.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        <state relative-caret-position="267">
+          <caret line="76" column="63" lean-forward="false" selection-start-line="76" selection-start-column="63" selection-end-line="76" selection-end-column="63" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -759,25 +754,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/youzan/src/pages/category/category.js">
+    <entry file="file://$PROJECT_DIR$/youzan/src/pages/index/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="51" column="67" lean-forward="false" selection-start-line="51" selection-start-column="67" selection-end-line="51" selection-end-column="67" />
+        <state relative-caret-position="285">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="23" selection-end-column="2" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#214#258#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/youzan/src/pages/category/category.html">
+    <entry file="file://$PROJECT_DIR$/youzan/src/pages/category/category.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="72" column="45" lean-forward="false" selection-start-line="72" selection-start-column="45" selection-end-line="72" selection-end-column="45" />
+        <state relative-caret-position="342">
+          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
           <folding>
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#mt-loadmore#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#mt-loadmore#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#mt-loadmore#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
