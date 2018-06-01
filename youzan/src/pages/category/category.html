@@ -58,12 +58,12 @@
       </div>
       <div class="class-category">
           <div id="scroll-main-wrap" class="main-content">
-              <div  v-if="topId === '-1'" id="scroll-main-content" class="js-main-content inner-content" style="transform: translate3d(0px, 0px, 0px);">
+              <div v-cloak  v-if="topId === '-1'" id="scroll-main-content" class="js-main-content inner-content" style="transform: translate3d(0px, 0px, 0px);">
                 <div class="hot-wrap">
                   <div class="hot-goods">
                     <div class="hot-title">
                       <p class="pull-left">热销商品榜</p>
-                      <a href="https://maijia.youzan.com/mars/rank/hotgoods" class="pull-right icon-right">更多</a>
+                      <a href="javascript:;" class="pull-right icon-right">更多</a>
                     </div>
                     <ul>
                       <li v-for="(item, index) in hotGoods" :key="index" class="goods-item">
@@ -87,7 +87,7 @@
                   <div class="hot-shops" style="position: relative;">
                     <div class="hot-title">
                       <p class="pull-left">TOP店铺榜</p>
-                      <a href="https://maijia.youzan.com/mars/rank/hotshops" class="pull-right icon-right">更多</a>
+                      <a href="javascript:;" class="pull-right icon-right">更多</a>
                     </div>
                     <ul>
                       <li v-for="(item, index) in hotShop" :key="index" class="shop-item">
@@ -98,7 +98,7 @@
                         </div>
                         <ul class="shop-images">
                           <li>
-                            <a href="item.clickUrl"><img :src="item.images"></a>
+                            <a :href="item.clickUrl"><img :src="item.images"></a>
                           </li>
                         </ul>
                       </li>
@@ -116,17 +116,17 @@
                   </div>
                 </div>
               </div>
-          <div v-else id="scroll-main-content" class="js-main-content inner-content" style="height: 534px; transform: translate3d(0px, 0px, 0px);">
+          <div v-cloak v-else id="scroll-main-content" class="js-main-content inner-content" style="height: 534px; transform: translate3d(0px, 0px, 0px);">
             <h3 class="category-title">热门品牌 </h3>
             <ul class="category-content">
-                <li v-for="(item, index) in brandList" class="category-item js-category-item" :data-item-id="item.id" :data-item-name="item.name">
+                <li @click="toSearch(item)" v-for="(item, index) in brandList" class="category-item js-category-item" :data-item-id="item.id" :data-item-name="item.name">
                     <img :src="item.image" :alt="item.name" class="category-img">
                     <span class="category-item-name">{{ item.name }} </span>
                 </li>
             </ul>
             <h3 class="category-title"> 热门分类  </h3>
             <ul class="category-content">
-              <li v-for="(item, index) in categoryList" class="category-item js-category-item" :data-item-id="item.id" :data-item-name="item.name">
+              <li @click="toSearch(item)" v-for="(item, index) in categoryList" class="category-item js-category-item" :data-item-id="item.id" :data-item-name="item.name">
                 <img :src="item.image" :alt="item.name" class="category-img">
                 <span class="category-item-name">
                 {{ item.name }}</span>

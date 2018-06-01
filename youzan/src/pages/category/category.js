@@ -5,20 +5,7 @@ import Vue from "vue";
 import leanCloudTool from "js/api.js";
 
 import footNav from "components/FootNav.vue"
-import { Loadmore } from 'mint-ui';
-import { Toast } from 'mint-ui';
-
-Vue.component(Loadmore.name, Loadmore);
-
-Vue.filter('floatnum', function (value) {
-    let strValue = String(value)
-    if (strValue.indexOf(".") === -1) {
-        return strValue + ".00"
-    }
-    else if (strValue.split(".")[1].length === 1) {
-        return strValue + "0"
-    }
-})
+import priceMixin from "js/mixin.js"
 
 new Vue({
     el: "#app",
@@ -69,10 +56,14 @@ new Vue({
                     this.categoryList = JSON.parse(data.categoryList)
                 })
             }
+        },
+        toSearch(item) {
+            window.location.href = `search.html?keyword=${item.name}&id=${item.id}`
         }
     },
     created() {
         this.getAsideTitleList()
         this.getSubList("-1",0)
-    }
+    },
+    mixins: [priceMixin],
 })

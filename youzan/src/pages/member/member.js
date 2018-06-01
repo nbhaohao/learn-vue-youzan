@@ -1,6 +1,5 @@
-import "./cart_base.css"
-import "./cart_trade.css"
-import "./cart.css"
+import "./member_base.css"
+import "./member.css"
 //
 // import Vue from "vue";
 // import leanCloudTool from "js/api.js";

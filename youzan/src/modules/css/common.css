@@ -875,4 +875,48 @@ html {
   font-family: Helvetica, STHeiti STXihei, Microsoft YaHei, Tohoma, Arial
 }
 
- 
+[v-cloak] {display: none!important;}
+
+.fadeIn {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-name: a;
+    animation-name: a
+}
+
+@-webkit-keyframes a {
+    0% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes a {
+    0% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.list-finished span,
+.loading-more span {
+    display: inline-block;
+    margin-top: 10px;
+    width: 16px;
+    height: 16px;
+    background: url(https://b.yzcdn.cn/v2/image/loader.gif) no-repeat 50%;
+    background-size: 16px 16px
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+only screen and (min--moz-device-pixel-ratio:1.5),
+only screen and (min-device-pixel-ratio:1.5) {
+    .list-finished span,
+    .loading-more span {
+        background-image: url(https://b.yzcdn.cn/v2/image/loader@2x.gif)
+    }
+}
