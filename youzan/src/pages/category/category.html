@@ -17,11 +17,14 @@
   <meta http-equiv="cleartype" content="on">
   <link rel="shortcut icon" href="https://b.yzcdn.cn/v2/image/yz_fc.ico">
   <title>分类</title>
+    <style>
+        [v-cloak] {display: none;}
+    </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 
 <body class=" " style="">
-    <div id="app">
+    <div id="app" v-cloak>
   <div class="container with-bottom-nav" style="">
     <div class="custom-search js-search-bar">
       <form>
@@ -67,7 +70,7 @@
                     </div>
                     <ul>
                       <li v-for="(item, index) in hotGoods" :key="index" class="goods-item">
-                        <a :href="item.clickUrl">
+                        <a :href="'goods.html?id=' + item.id">
                           <div class="thumb badge center-img">
                             <img :src="item.image">
                             <span class="num">{{ index + 1 }}</span>

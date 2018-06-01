@@ -17,11 +17,14 @@
   <meta http-equiv="cleartype" content="on">
   <link rel="shortcut icon" href="https://b.yzcdn.cn/v2/image/yz_fc.ico">
   <title>列表</title>
+    <style>
+        [v-cloak] {display: none;}
+    </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 
 <body class=" " style="min-height: 667px;">
-<div id="app" @touchmove="move">
+<div id="app" @touchmove="move" v-cloak>
   <div class="container with-top-search" style="min-height: 667px;" v-infinite-scroll="loadMore" infinite-scroll-disabled="goodList.loading" infinite-scroll-distance="10">
     <div class="custom-search js-search-bar">
       <form>
@@ -52,7 +55,7 @@
       <div class="search-wrap js-waterfull-wrap">
         <ul class="js-list">
           <li v-for="(item, index) in goodList.lists" class="goods-item">
-            <a href="javascrpit:;">
+            <a :href="'goods.html?id=' + item.id">
               <div class="thumb">
                 <img :src="item.image" class="fadeIn">
                 <i class="sell-out" v-if="item.isOut"></i>
