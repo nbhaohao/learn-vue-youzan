@@ -91,6 +91,9 @@ new Vue({
                         this.details[key] = data[key]
                     }
                 }
+                this.$nextTick(function () {
+                    document.querySelector(".custom-richtext").innerHTML = this.details.goodHTML
+                })
             })
         },
         getDealList() {
