@@ -12,6 +12,7 @@
   "dependencies": {
     "animate.css": "^3.6.1",
     "axios": "^0.18.0",
+    "hammerjs": "^2.0.8",
     "install": "^0.11.0",
     "leancloud-storage": "^3.7.0",
     "mint-ui": "^2.2.13",

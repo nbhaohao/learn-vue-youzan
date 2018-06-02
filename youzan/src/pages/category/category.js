@@ -59,7 +59,7 @@ new Vue({
         },
         toSearch(item) {
             window.location.href = `search.html?keyword=${item.name}&id=${item.id}`
-        }
+        },
     },
     created() {
         this.getAsideTitleList()

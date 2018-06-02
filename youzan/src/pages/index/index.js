@@ -35,7 +35,7 @@ new Vue({
                 },
                 autoplay: true,
             },
-            domSelector: ".js-image-swiper .index-swiper",
+            domSelector: ".index-swiper",
         },
     },
     components: {

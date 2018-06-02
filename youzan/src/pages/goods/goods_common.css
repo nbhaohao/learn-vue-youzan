@@ -579,8 +579,7 @@
     color: #999
   }
   
-  .fullscreen-guide.hide,
-  .motify {
+  .fullscreen-guide.hide{
     display: none
   }
   

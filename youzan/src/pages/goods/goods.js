@@ -35,6 +35,7 @@ new Vue({
         skuType: 1,
         showSku: false,
         showCartBtn: false,
+        showAddCartSuccessInfo: false,
         dealList:null,
         activeBtnIndex: 0,
         bannerSwiper: {
@@ -91,9 +92,6 @@ new Vue({
                         this.details[key] = data[key]
                     }
                 }
-                this.$nextTick(function () {
-                    document.querySelector(".custom-richtext").innerHTML = this.details.goodHTML
-                })
             })
         },
         getDealList() {
@@ -116,6 +114,8 @@ new Vue({
         },
         addToCart() {
             this.hidePop()
+            this.showAddCartSuccessInfo = true
+            setTimeout(() => {this.showAddCartSuccessInfo = false}, 1500)
             this.showCartBtn = true
         },
     },
