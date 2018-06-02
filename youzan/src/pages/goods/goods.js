@@ -34,6 +34,7 @@ new Vue({
         detailTab,
         skuType: 1,
         showSku: false,
+        showCartBtn: false,
         dealList:null,
         activeBtnIndex: 0,
         bannerSwiper: {
@@ -109,6 +110,10 @@ new Vue({
         },
         hidePop() {
             this.showSku = false
+        },
+        addToCart() {
+            this.hidePop()
+            this.showCartBtn = true
         },
     },
     components: {
