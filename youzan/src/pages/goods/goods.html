@@ -380,20 +380,20 @@
   </div>
     <!-- 阴影层 -->
     <transition name="bgMask">
-         <div v-show="showSku" id="yFzBKP9GDL" style="background-color: rgba(0,0,0,0.7);height: 100%; position: fixed; top: 0px; left: 0px; right: 0px;z-index: 1000;;"></div>
+         <div @click="hidePop" v-show="showSku" id="yFzBKP9GDL" style="background-color: rgba(0,0,0,0.7);height: 100%; position: fixed; top: 0px; left: 0px; right: 0px;z-index: 1000;;"></div>
     </transition>
         <!-- 弹出层 -->
     <transition name="popShow">
-    <div v-show="showSku" id="QfEqtDbeK9" class="sku-layout sku-box-shadow popup" style="overflow: hidden; position: fixed; z-index: 1000; background: white; bottom: 0px; left: 0px; right: 0px;">
+    <div v-show="showSku" id="QfEqtDbeK9" class="sku-layout sku-box-shadow popup" style="overflow: hidden; position: fixed; z-index: 1002; background: white; bottom: 0px; left: 0px; right: 0px;">
         <div class="sku-layout-title name-card sku-name-card">
-          <div class="thumb"><img class="js-goods-thumb goods-thumb" src="https://img.yzcdn.cn/upload_files/2017/07/12/FkSvYz8FLLD9-t0smXO43hF6ov7S.jpg?imageView2/2/w/100/h/100/q/75/format/webp?imageView2/2/w/100/h/100/q/75/format/webp" alt=""></div>
+          <div class="thumb"><img class="js-goods-thumb goods-thumb" :src="details.imagesArr && details.imagesArr[0].image" alt=""></div>
           <div class="detail goods-base-info clearfix">
-            <p class="title c-black ellipsis">寻找田野|最正宗的上海南汇8424 得奖最多奥运会指定西瓜1只/箱 9-11斤</p>
+            <p class="title c-black ellipsis">{{ details.title }}</p>
             <div class="goods-price clearfix">
               <div class="current-price pull-left c-black">
-                <span class="price-name pull-left font-size-14 c-orange">¥</span><i class="js-goods-price price font-size-16 vertical-middle c-orange">98.00</i>
+                <span class="price-name pull-left font-size-14 c-orange">¥</span><i class="js-goods-price price font-size-16 vertical-middle c-orange">{{ details.price | floatnum }}</i>
               </div>
-              <div class="original-price vertical-middle font-size-14 line-through">108</div>
+              <div class="original-price vertical-middle font-size-14 line-through">{{ details.originalPrice }}</div>
             </div>
           </div>
           <div class="js-cancel sku-cancel" @click="hidePop">
@@ -427,16 +427,16 @@
               <dd class="sku-quantity-contaienr">
                 <dl class="clearfix">
                   <div class="quantity">
-                    <button class="minus disabled" type="button" disabled="true"></button>
-                    <input type="text" class="txt" pattern="[0-9]*" value="1">
-                    <button class="plus" type="button"></button>
-                    <div class="response-area response-area-minus"></div>
-                    <div class="response-area response-area-plus"></div>
+                    <button class="minus" :class="{'disabled': !isbuyMinusVaild}" type="button"></button>
+                    <input type="text" class="txt"  v-model.number="buyNum">
+                    <button class="plus" type="button" :class="{'disabled': !isbuyAddVaild}"></button>
+                    <div @click="minusBuNum" class="response-area response-area-minus"></div>
+                    <div @click="addBuyNum" class="response-area response-area-plus"></div>
                   </div>
                 </dl>
               </dd>
               <dt class="other-info">
-                <div class="stock">剩余{{ details.remain }}件
+                <div class="stock">剩余{{ remainNum }}件
                 </div>
               </dt>
             </dl>

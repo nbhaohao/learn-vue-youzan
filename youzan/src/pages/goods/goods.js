@@ -47,8 +47,39 @@ new Vue({
             },
             domSelector: ".index-swiper",
         },
+        buyNum: 1,
+        numReg: /^[1-9]\d*$/,
+    },
+    computed: {
+        isbuyMinusVaild: function() {
+            if (this.buyNum && this.buyNum > 1) {
+                return true
+            } else {
+                return false
+            }
+        },
+        isbuyAddVaild: function() {
+            return this.remainNum <= 0 ? false : true
+        },
+        remainNum: function() {
+            let minus = this.details.remain - this.buyNum
+            return minus >= 0 ? minus : 0
+        }
     },
     methods: {
+        addBuyNum() {
+            if (!this.isbuyAddVaild) {return}
+            if (this.numReg.test(String(this.buyNum))) {
+                this.buyNum += 1
+            } else {
+                this.buyNum = 1
+            }
+        },
+        minusBuNum() {
+            if (this.isbuyMinusVaild) {
+                this.buyNum -= 1
+            }
+        },
         getGoodDetail() {
             leanCloudTool("ShopDetail").then(res => {
                 let data = res[0]
@@ -78,16 +109,19 @@ new Vue({
         },
         hidePop() {
             this.showSku = false
-        }
+        },
     },
     components: {
         "top-banner": topBanner,
     },
     watch: {
         showSku(value, oldValue) {
-            let styValue = value ? "hidden": "auto"
+            let styValue = value ? "hidden" : "auto"
+            let heightValue = value ? "100%" : "auto"
             document.body.style.overflow = styValue
             document.querySelector("html").style.overflow = styValue
+            document.body.style.height = heightValue
+            document.querySelector("html").style.height = heightValue
         }
     },
     created() {
