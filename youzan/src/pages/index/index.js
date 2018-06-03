@@ -3,7 +3,7 @@ import "./index.css";
 
 import Vue from "vue";
 import leanCloudTool from "js/api.js";
-import { Toast } from 'mint-ui';
+c
 import { InfiniteScroll } from 'mint-ui';
 
 Vue.use(InfiniteScroll);
@@ -88,12 +88,6 @@ new Vue({
         getBannerImg() {
             leanCloudTool("Banner").then(res => {
                 this.bannerList = res
-            }, () => {
-                Toast({
-                    message: '网络异常',
-                    position: 'bottom',
-                    duration: 2500
-                })
             })
         },
     },

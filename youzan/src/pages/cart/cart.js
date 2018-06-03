@@ -145,7 +145,10 @@ new Vue({
             } else {
                 shop.statusMessage = "编辑"
                 this.status = "view"
-                shop.goodList.forEach(item => {item.offset = 0})
+                shop.goodList.forEach(item => {
+                    item.offset = 0
+                    item.isShow = false
+                })
                 Vue.set(this.cartList, shopIndex,shop)
             }
         },
