@@ -14,6 +14,10 @@
                              :to="{name: 'addressForm', query: {type: 'add'},}">
                     新增地址
                 </router-link>
+                <router-link class="btn-blue btn btn-red js-no-webview-block js-add-address-btn"
+                             to="/index-1">
+                    返回
+                </router-link>
             </div>
         </div>
 </template>

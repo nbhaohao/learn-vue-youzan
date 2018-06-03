@@ -17,12 +17,19 @@
                 </div>
             </div>
         </div>
+        <div class="backBtnWrapper" @click="backToIndex">
+            返回
+        </div>
     </div>
 </template>
 
 <script>
     export default {
-
+        methods: {
+            backToIndex() {
+                window.location.href = 'index.html'
+            }
+        }
     }
 
 </script>

@@ -34,8 +34,11 @@
     <div class="content clearfix js-page-content">
       <div id="cart-container">
         <div>
+            <div class="topNavbar">
+                <span class="backBtn" @click="back">返回</span>
+                <span>购物车</span>
+            </div>
           <div class="js-shop-list shop-list">
-
               <div v-for="(item, index) in cartList" :key="index" class="block block-order block-cart" v-if="item.goodList.length > 0">
               <div class="header">
                 <div @click="selectShop(item,index)" class="select-group js-select-group"><span :class="{'checked': status === 'view' ? item.checked : item.removeChecked}" class="check"></span></div> <a class="shop-title"><i class="custom-store-img">店铺：</i>{{ item.shopTitle }}</a>

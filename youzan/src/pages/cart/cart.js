@@ -220,6 +220,9 @@ new Vue({
             this.isMessageDialogShow = false
             this.delInfo = []
             this.status = "view"
+        },
+        back() {
+            window.location.href = "index.html"
         }
     },
     created() {

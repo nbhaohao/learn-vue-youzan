@@ -42,10 +42,13 @@
                 <div class="block-item c-red center" @click="delItem">删除</div>
             </div>
             <div class="block stick-bottom-row center js-save-default" v-show="type === 'edit'">
-                <button @click="updateDefaultAddress" class="btn btn-standard js-save-default-btn">设为默认收货地址</button>
+                <button @click="updateDefaultAddress" class="btn btn-standard js-save-default-btn" style="background-color:#00a0f8;border-color:#00a0f8;">设为默认收货地址</button>
+                <button @click="back" class="btn btn-standard js-save-default-btn">返回</button>
+            </div>
+            <div v-cloak v-show="type === 'add'" class="backBtnWrapper" @click="back">
+                返回
             </div>
         </div>
-        <a style="display: block;" href="https://pfmarket.youzan.com/market/home?m_alias=3nu78u467kddj" class="ft-copyright"></a>
     </div>
 </template>
 <script>
@@ -150,6 +153,9 @@
             updateDefaultAddress() {
                 this.$store.dispatch("upDateDefaultAddress", this.currentIndex)
                 this.$router.go(-1)
+            },
+            back() {
+                this.$router.go(-1)
             }
         },
         created() {
@@ -195,5 +201,18 @@
 <style>
     @import "address_base.css";
     @import "address.css";
+    .backBtnWrapper {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        border-color:#FF4444;
+        background-color:#FF4444;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 </style>
 

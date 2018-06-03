@@ -1882,3 +1882,27 @@ van-button--large {
     display: block;
     color: #f60;
 }
+.topNavbar {
+    height: 50px;
+    text-align: center;
+    border-color: #FF4444;
+    background-color: #FF4444;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    position: relative;
+}
+
+.topNavbar > .backBtn {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 15px;
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+}
