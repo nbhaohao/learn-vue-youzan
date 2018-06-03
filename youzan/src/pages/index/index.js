@@ -3,7 +3,7 @@ import "./index.css";
 
 import Vue from "vue";
 import leanCloudTool from "js/api.js";
-c
+import { Toast } from 'mint-ui';
 import { InfiniteScroll } from 'mint-ui';
 
 Vue.use(InfiniteScroll);

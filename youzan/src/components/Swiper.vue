@@ -2,7 +2,7 @@
     <div class="index-swiper swiper-container">
         <div class="swiper-wrapper">
             <div class="swp-page swiper-slide" v-for="(item, index) in slideList" :key="index">
-                <a class="js-no-follow" :href="item.clickUrl">
+                <a class="js-no-follow" href="javascript:;">
                     <img class="goods-main-photo fadeIn" :src="item.image">
                 </a>
             </div>

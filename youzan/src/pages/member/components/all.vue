@@ -3,10 +3,10 @@
             <div v-cloak v-if="addressList && addressList.length > 0" class="block-list address-list section section-first js-no-webview-block">
                 <!--  -->
                 <a :class="{'address-item-default': index === activeIndex}" v-for="(item,index) in addressList" :key="item.myid" class="block-item js-address-item address-item">
-                    <span @click="activeIndex = index" class="editAddress-check"></span>
+                    <span @click="changeDefaultAddress(index)" class="editAddress-check"></span>
                     <div class="address-title">{{ item.name }} {{ item.phone }}</div>
                     <p>{{ item.provinceStr + item.cityStr + item.districtStr + item.address }}</p>
-                    <span @click="toEdit(item)" class="editAddress-btn">修改</span>
+                    <span @click="toEdit(item,index)" class="editAddress-btn">修改</span>
                 </a>
             </div>
             <div class="block stick-bottom-row center">
@@ -19,28 +19,31 @@
 </template>
 <script>
     import leanCloudTool from "js/api.js";
+    import { mapState } from 'vuex'
     export default {
-        data() {
-            return {
-                addressList: null,
-                activeIndex: 0,
-            }
-        },
         methods: {
-            toEdit(item) {
+            toEdit(item, index) {
                 this.$router.push({name: "addressForm", query: {
                     type: "edit",
                     instance: item,
+                    index,
                 }})
             },
-            getAddressList() {
-                leanCloudTool("addressList").then(res => {
-                    this.addressList = res
-                })
+            changeDefaultAddress(index) {
+                this.$store.dispatch("upDateDefaultAddress", index)
             }
         },
+        computed: {
+            ...mapState({
+                addressList: 'lists',
+                activeIndex: "activeIndex",
+            })
+        },
+
         created() {
-            this.getAddressList()
+            if (!this.addressList) {
+                this.$store.dispatch("getLists")
+            }
         }
     }
 </script>
